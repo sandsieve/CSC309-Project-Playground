@@ -98,8 +98,15 @@
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Check-out">
       </div>
-      <button type="submit" class="btn">Search</button>
+      <button type="submit" class="btn" id="search-btn">Search</button>
     </form>
+    <script>
+      document.getElementById("search-btn").addEventListener("click", function(event) {
+        event.preventDefault();
+        window.location.href = "properties.html";
+      });
+    </script>
+    
   </body>
 </html>
 
