@@ -58,7 +58,7 @@
   </head>
   <body>
     <nav class="navbar">
-      <a href="#">Home</a>
+      <a href="index.html">Home</a>
       <h2>RESTIFY</h2>
       <span>John Doe</span>
     </nav>
@@ -69,41 +69,52 @@
           <h5>Property 1</h5>
           <p>Location: Los Angeles</p>
           <p>Price: $500/night</p>
-          <button class="btn btn-primary">Details</button>
+          <button id="property1-details" class="btn btn-primary">Details</button>
         </div>
         <div class="property-card">
           <h5>Property 2</h5>
           <p>Location: New York</p>
           <p>Price: $600/night</p>
-          <button class="btn btn-primary">Details</button>
+          <button id="property2-details" class="btn btn-primary">Details</button>
         </div>
         <div class="property-card">
           <h5>Property 3</h5>
           <p>Location: San Francisco</p>
           <p>Price: $450/night</p>
-          <button class="btn btn-primary">Details</button>
+          <button id="property3-details" class="btn btn-primary">Details</button>
         </div>
         <div class="property-card">
           <h5>Property 4</h5>
           <p>Location: Miami</p>
           <p>Price: $550/night</p>
-          <button class="btn btn-primary">Details</button>
+          <button id="property4-details" class="btn btn-primary">Details</button>
         </div>
         <div class="property-card">
           <h5>Property 5</h5>
           <p>Location: Las Vegas</p>
           <p>Price: $650/night</p>
-          <button class="btn btn-primary">Details</button>
+          <button id="property5-details" class="btn btn-primary">Details</button>
         </div>
         <div class="property-card">
           <h5>Property 6</h5>
           <p>Location: Chicago</p>
           <p>Price: $400/night</p>
-          <button class="btn btn-primary">Details</button>
+          <button id="property6-details" class="btn btn-primary">Details</button>
         </div>
-        
+
       </div>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const propertyButtons = document.querySelectorAll(".property-card button");
+        propertyButtons.forEach(function(button) {
+          button.addEventListener("click", function() {
+            window.location.href = "property_card.html";
+          });
+        });
+      });
+    </script>
+    
   </body>
 </html>
   
